@@ -917,7 +917,7 @@ transform-origin: top center;
           </div>
           <div class="chronix-card clock-card">
             <div class="card-tag-top" id="live-day">--------</div>
-            <div class="clock-number" id="live-minutes">00</div>
+            <div class="clock-number accented" id="live-minutes">00</div>
             <div class="card-tag-bottom bottom-right" id="live-seconds">00</div>
           </div>
         </div>
@@ -1093,6 +1093,24 @@ transform-origin: top center;
 
   <p style="color:var(--text-accent);margin-top:10px;">
     Open the Atmosphere Profiles gallery
+  </p>
+</div>
+
+<div
+  class="chronix-card panel-card"
+  id="feedback-center"
+  style="margin-bottom:30px;cursor:pointer;"
+>
+  <div class="card-tag-top" style="position:static;">
+    Support
+  </div>
+
+  <h3 style="margin-top:10px;">
+    Feedback & Bugs →
+  </h3>
+
+  <p style="color:var(--text-accent);margin-top:10px;">
+    Report bugs and suggest new features
   </p>
 </div>
           
@@ -1359,6 +1377,13 @@ transform-origin: top center;
 .getElementById('open-theme-center')
 ?.addEventListener('click',()=>{
     executiveSwitchView('themes');
+});
+
+document
+.getElementById('feedback-center')
+?.addEventListener('click', ()=>{
+    window.location.href =
+    'mailto:ashakhatua46@gmail.com?subject=Chronix%20Feedback';
 });
 
     
