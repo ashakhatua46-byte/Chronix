@@ -274,12 +274,16 @@
     /* -------------------------------------------------------------
        5. HOME INTERFACE CLOCK
        ------------------------------------------------------------- */
-    .home-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
+      
+       .home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  flex: 1;
+}
 
     .home-grid {
       display: grid;
@@ -839,6 +843,8 @@
    @media (max-width: 650px) and (orientation: portrait) {
     .home-grid {
         grid-template-columns: 1fr;
+        transform: scale(0.95);
+transform-origin: top center;
     }
 }
 
@@ -855,12 +861,18 @@
         width: 100%;
         max-width: 100%;
     }
-}
+
       .clock-card {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1.15 / 0.85;
   border-radius: 24px;
 }
-      .pomo-grid, .themes-container-grid { grid-template-columns: 1fr; }
+      .pomo-grid {
+    grid-template-columns: 1fr;
+}
+
+.themes-container-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
       .theme-preview-card { aspect-ratio: 1.5 / 1; }
       .app-container.dock-active { transform: translateX(-25px) scale(0.94); }
       .dock { width: 75px; gap: 16px; }
@@ -868,7 +880,8 @@
       .card-tag-top { top: 24px; left: 28px; }
       .card-tag-bottom { bottom: 24px; left: 28px; }
       .card-tag-bottom.bottom-right { right: 28px; left: auto; }
-    }
+    
+}
 
 </style>
 </head>
